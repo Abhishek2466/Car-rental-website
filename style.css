@@ -73,7 +73,7 @@ header{
     width: 100%;
 
 }
-#menu-icons{
+#menu-icon{
     font-size: 24px;
     cursor: pointer;
     z-index: 10001;
@@ -127,7 +127,7 @@ header{
     margin-right: 1rem;
     cursor: pointer;
 }
-.form-container {
+ .form-container{
     position: absolute;
     bottom: 4rem;
     left: 100px;
@@ -394,7 +394,6 @@ form-container form .btn:hover{
 
 }
 
-/* Making Responsive */
 @media (max-width:991px){
     header{
         padding: 18px 40px;
@@ -516,3 +515,40 @@ form-container form .btn:hover{
          grid-template-columns: repeat(auto-fit,minmax(254px,auto));
     }
 }
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color); 
+  display: none;
+  z-index: 101;
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background: #fff; 
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .header-btn {
+    display: none; 
+  }
+}
+
